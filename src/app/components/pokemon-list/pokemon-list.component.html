@@ -1,0 +1,40 @@
+
+<div class="home" infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">
+    <app-top-bar></app-top-bar>
+    <div class="in-flex">
+        <form class="search" [formGroup]="formSearchPokemon">
+            <div>
+                Name
+                <input  class="textbox"
+                type="text" 
+                placeholder="Name" 
+                formControlName="txtName">
+            </div>
+            <div>
+                Type
+                <input  class="textbox"
+                type="text" 
+                placeholder="Type" 
+                formControlName="txtType">
+            </div>
+            <div class="text-center">
+                <button type="button" (click)="search()" class="button"> Search </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="in-flex">
+        <div  (click)="details( item )" *ngFor="let item of auxListPokemon" class="card text-center">
+            <h3 class="card-title">{{ item.name | titlecase  }}</h3>
+            <img class="card-img-top" [src]="item.image">
+            <div class="card-body">
+                <p class="card-text">
+                    <span *ngFor="let type of item.types">
+                        {{ type }}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</div>

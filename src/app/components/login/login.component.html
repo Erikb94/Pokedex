@@ -1,0 +1,45 @@
+<div class="home">
+    <div class="in-flex text-center">
+        <h2>
+            Welcome Pokemon trainer!
+        </h2>
+        <h3>
+            I am your pokedex
+        </h3>
+        <p>
+            I will help you to find anything you need to know about the pokemons we will be finding in our way.
+            But first I need to know who you are
+            Please log in
+        </p>
+    </div>
+    <div class="in-flex">
+        <form [formGroup]="formLogin">
+            <div>
+                User (E-mail)
+                <input  class="textbox"
+                type="text" 
+                placeholder="E-mail" 
+                formControlName="txtEmail">
+            </div>
+            <div>
+                Password
+                <input  class="textbox"
+                type="password" 
+                placeholder="Password" 
+                formControlName="txtPassword">
+            </div>
+            <div class="buttonContainer">
+                <button type="button" (click)="login()" class="button"> Login </button>
+            </div>
+            
+        </form>
+        
+    </div>
+    <div class="in-flex">
+        <div class="text-center">
+            <p>
+                If you do not have an account please let me register your information <a href="" routerLink="../register" >here</a>
+            </p>
+        </div>
+    </div>
+</div>

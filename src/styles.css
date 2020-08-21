@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #cb3234;
+}
+
+app-top-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+app-top-bar div {
+    flex: 1;
+    padding: 25px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search div:last-child{
+    flex: 1
+}
+
+.search div{
+    flex: 3;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.in-flex{
+    flex: 1;
+}
+
+.in-flex:first-child{
+    flex: 2;
+    padding: 25px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.in-flex div {
+    padding: 25px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buttonContainer button{
+    flex: 1;
+    padding: 15px;
+    margin: 20px;
+}

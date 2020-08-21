@@ -1,0 +1,44 @@
+<div class="home">
+    <div class="in-flex text-center">
+        <p>
+            I will need your information to help you to be the best pokemon trainer ever!
+        </p>
+    </div>
+    <div class="in-flex">
+        <form [formGroup]="formRegister">
+            <div>
+                Full Name
+                <input  class="textbox"
+                type="text" 
+                placeholder="Full Name" 
+                formControlName="txtName">
+            </div>
+            <div>
+                User (E-mail)
+                <input  class="textbox"
+                type="text" 
+                placeholder="E-mail" 
+                formControlName="txtEmail">
+            </div>
+            <div>
+                Password
+                <input  class="textbox"
+                type="password" 
+                placeholder="Password" 
+                formControlName="txtPassword">
+            </div>
+            <div>
+                Confirm password
+                <input  class="textbox"
+                type="password" 
+                placeholder="Confirm Password" 
+                formControlName="txtChkPassword">
+            </div>
+            <div class="buttonContainer">
+                <button type="button" (click)="register()" class="button"> Register </button>
+                <button type="button" (click)="cancel()" class="button"> Cancel </button>
+            </div>
+        </form>
+        
+    </div>
+</div>

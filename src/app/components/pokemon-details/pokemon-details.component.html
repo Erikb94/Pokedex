@@ -1,0 +1,28 @@
+<app-top-bar></app-top-bar>
+<div class="in-flex text-center">
+    <div>
+        <h2>ID</h2>
+        <h3>{{  pokemon.id }}</h3>
+        <h2>Name</h2>
+        <h3>{{ pokemon.name | titlecase }}</h3>
+        <img class = "card-img-top" [src]="pokemon.image" >
+    </div>
+    <div class="card-body">
+        <h4>Types</h4>
+        <p class="card-text">
+            <span *ngFor="let type of pokemon.types">
+                {{ type }}
+            </span>
+        </p>
+        <h4>Height</h4>
+        <h5>{{ pokemon.height }}</h5>
+        <h4>Weight</h4>
+        <h5>{{ pokemon.weight }}</h5>
+        <h4>Moves</h4>
+        <p class="card-text">
+            <span *ngFor="let move of pokemon.moves">
+                {{ move }}
+            </span>
+        </p>
+    </div>
+</div>
