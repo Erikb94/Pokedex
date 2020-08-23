@@ -1,6 +1,37 @@
+<div class="top-bar-container">
+    <div class="top-bar">
+        <div>
+            <form class="search" [formGroup]="formSearchPokemon">
+                <div>
+                    <label style="margin: 10px;">Name</label>
+                    <input  class="textbox"
+                    type="text" 
+                    placeholder="Name" 
+                    formControlName="txtName">
+                </div>
+                <div>
+                    <label style="margin: 10px;">Type</label>
+                    <input  class="textbox"
+                    type="text" 
+                    placeholder="Type" 
+                    formControlName="txtType">
+                </div>
+                <div class="buttonContainer text-center">
+                    <button type="button" (click)="search()" class="button"> Search </button>
+                </div>
+            </form>
+        </div>
+        
+        <div>
+            <a href="" routerLink="">Log Out</a>
+        </div>
+    </div>
+</div>
 
 <div class="home" infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">
-    <app-top-bar></app-top-bar>
+    <!-- <div class="in-flex">
+        <a href="" routerLink="">Log Out</a>
+    </div>
     <div class="in-flex">
         <form class="search" [formGroup]="formSearchPokemon">
             <div>
@@ -17,22 +48,25 @@
                 placeholder="Type" 
                 formControlName="txtType">
             </div>
-            <div class="text-center">
+            <div class="buttonContainer text-center">
                 <button type="button" (click)="search()" class="button"> Search </button>
             </div>
         </form>
-    </div>
+    </div> -->
+    
 
-    <div class="in-flex">
-        <div  (click)="details( item )" *ngFor="let item of auxListPokemon" class="card text-center">
-            <h3 class="card-title">{{ item.name | titlecase  }}</h3>
-            <img class="card-img-top" [src]="item.image">
-            <div class="card-body">
-                <p class="card-text">
-                    <span *ngFor="let type of item.types">
-                        {{ type }}
-                    </span>
-                </p>
+    <div class="row">
+        <div  (click)="details( item )" *ngFor="let item of auxListPokemon" class="column text-center">
+            <div class="card">
+                <h3 class="card-title">{{ item.name | titlecase  }}</h3>
+                <img class="card-img-top" [src]="item.image">
+                <div class="card-body">
+                    <p class="card-text">
+                        <span class="type-box" *ngFor="let type of item.types">
+                            {{ type }}
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

@@ -15,6 +15,7 @@ export class PokemonListComponent implements OnInit {
   listPokemon: Pokemon[];
   index: number;
   auxListPokemon: Pokemon[];
+  searching: boolean = false;
   constructor(private pokeApiService: PokeapiService,
               private router: Router,
               private formBuilder: FormBuilder,
@@ -55,6 +56,7 @@ export class PokemonListComponent implements OnInit {
   async search(){
     try {
       this.spinner.show();  
+      this.searching = true
       let name: string = this.formSearchPokemon.controls.txtName.value;
       let type: string = this.formSearchPokemon.controls.txtType.value;
       let reg;
@@ -77,8 +79,10 @@ export class PokemonListComponent implements OnInit {
   }
 
   onScroll(){
-    this.index++;
-    this.auxListPokemon = this.listPokemon.slice(0,(this.index+1)*50);
+    if(!this.searching){
+      this.index++;
+      this.auxListPokemon = this.listPokemon.slice(0,(this.index+1)*50);
+    }
   }
 
 }

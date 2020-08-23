@@ -7,7 +7,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -20,8 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     PokemonListComponent,
-    PokemonDetailsComponent,
-    TopBarComponent
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,

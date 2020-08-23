@@ -8,23 +8,40 @@ body {
     background-color: #cb3234;
 }
 
-app-top-bar {
+.top-bar-container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 12vh;
+    background-color: #252850;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.top-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
 }
 
-app-top-bar div {
+.top-bar div {  
+    color: #fff;
+    flex: 3;
+}
+
+.top-bar div:last-child{
     flex: 1;
-    padding: 25px;
-    background-color: #fff;
-    margin: 20px;
+    text-align: end;
 }
 
 .search {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .search div:last-child{
@@ -38,6 +55,7 @@ app-top-bar div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 12vh;
 }
 
 .in-flex{
@@ -55,6 +73,10 @@ app-top-bar div {
     padding: 25px;
     background-color: #fff;
     margin: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: .25rem;
 }
 
 .buttonContainer{
@@ -67,4 +89,76 @@ app-top-bar div {
     flex: 1;
     padding: 15px;
     margin: 20px;
+    border-radius: .25rem;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: .25rem;
+}
+
+.type-box{
+    display: inline-block;
+    padding: .25em .4em;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #6c757d;
+    margin: 5px;
+}
+
+input{
+    margin: 10px;
+}
+
+div a{
+    margin: 10px;;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .top-bar-container{
+        height: 25vh;
+    }
+    .home{
+        padding-top: 25vh;       
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top-bar-container{
+        height: 40vh;
+    }
+    .home{
+        padding-top: 40vh;       
+    }
 }
